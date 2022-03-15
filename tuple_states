@@ -1,0 +1,14 @@
+def data(tuple):
+  nums = ()
+  words = ()
+  for t in tuple:
+    nums = nums + (t[0],)
+    if t[1] not in words:
+      words = words + (t[1],)
+  min_n = min(nums)
+  max_n = max(nums)
+  unique_words = len(words)
+  return (min_n, max_n, unique_words)
+lived = ((1990, "IL"),(2008, "MO"),(2013, "CA"),(2015, "MO"))
+(min_n, max_n, unique_words) = data(lived)
+print("From", min_n, "to", max_n, "I have lived in", unique_words, "states.")
